@@ -1,0 +1,154 @@
+/* ---------------------------------------- css content 内容部分（针对16:9标准屏）----------------------------------------*/
+/*animate*/
+@-webkit-keyframes rubberBand{
+	to{ transform: scale(1.4); }
+}
+.rubberBand {
+  -webkit-animation: rubberBand 0.35s infinite alternate;
+}
+@-webkit-keyframes heightfull{
+	0%{transform: translateY(100%);}
+	100%{transform: translateY(0);}
+}
+.heightfull { -webkit-animation: heightfull 2s infinite ease alternate; }
+@-webkit-keyframes rotatebehind {
+  0% {
+    opacity: 0;
+    -webkit-transform:  translate3d(0, 0, -10000px) rotate3d(1, 0, 0, 480deg) scale3d(0, 0, 0);
+    transform: translate3d(0, 0, -10000px) rotate3d(1, 0, 0, 480deg) scale3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+.rotatebehind { -webkit-animation: rotatebehind 2s linear 1; }
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.flash {
+  -webkit-animation: flash 3s infinite;
+}
+@-webkit-keyframes zoomIn{
+	0%{ -webkit-transform:scale(0) translateZ(-10000px);transform:scale(0) translateZ(-10000px); }
+	100% { -webkit-transform:scale(1) translateZ(0);transform:scale(1) translateZ(0); }
+}@keyframes zoomIn{
+	0%{ -webkit-transform:scale(0) translateZ(-10000px);transform:scale(0) translateZ(-10000px);}
+	100% { -webkit-transform:scale(1) translateZ(0);transform:scale(1) translateZ(0); }
+}
+.zoomIn { -webkit-animation: zoomIn 3s ease-in-out 1;animation: zoomIn 3s ease-in-out 1; }
+
+@-webkit-keyframes pnanim1{
+	0% { transform: translateX(0.2rem); }
+	100% { transform: translateX(0); }
+}
+.pnanim1 { -webkit-animation: pnanim1 2s linear infinite alternate; }
+@-webkit-keyframes pnanim2{
+	0% { transform: translateX(-0.2rem); }
+	100% { transform: translateX(0); }
+}
+.pnanim2 { -webkit-animation: pnanim2 2s linear infinite alternate; }
+@-webkit-keyframes z_suoxiao{
+	0% {
+    	-webkit-transform: scale(1);
+	}
+	25% {
+		-webkit-transform: scale(1.2);
+	}
+	50% {
+    	-webkit-transform: scale(1);
+	}
+	75% {
+		-webkit-transform: scale(1.2);
+	}
+	100% {
+    	-webkit-transform: scale(1);
+	}
+}
+
+.z_souxiao { -webkit-animation: z_suoxiao 15s linear 0.5s infinite both; }
+
+/*animate-end*/
+section.page { width: 100%;height: 100%;position: absolute;left: 0;top: 0; }
+.none { display: none; }
+a.bgmBtn { z-index: 999; }
+/*scratchcard--start*/
+section.scratchcard {  }
+section.scratchcard #ticketResult{ position: relative; width:100%;height: 100%; background-image: url(../images/weddingimg/invitation.png);visibility:hidden;}
+section.scratchcard #ticketResult h3 { text-align: center; font-size: .8rem; letter-spacing: 0.02rem;position: absolute;left: 0;top: 2rem;right: 0;margin: 0 auto;height: 6rem;visibility: hidden; }
+section.scratchcard #ticketResult h3 span{ font-size: 0.8rem;margin: 0 0.1rem; }
+span.char1{ color: #FF3030;}
+span.char2{ color: #EE7600;}
+span.char3{ color: #EEEE00;}
+span.char4{ color: #4169E1;}
+span.char5{ color: #9B30FF;}
+span.char6{ color: #00FFFF;}
+section.scratchcard #ticketResult canvas{ position: absolute; left: 0; top: 0;}
+section.scratchcard .arrow0 { position: absolute;bottom: 0.3rem;width: 1.3rem;left:50%;display: inline-block;height: 1.68rem;-webkit-mask-image: url(../images/weddingimg/rosebtn.png);margin-left: -0.65rem; }
+.arrow i { width: 100%;height: 100%;display: block;position: absolute;left: 0;top: 0;-webkit-mask-size: 100% 100%;}
+.arrow0 i { background-color: #EE00EE;visibility:hidden}
+/*page--scratchcard--end*/
+section.page1 { background-image: url(../images/weddingimg/bg.png); }
+section.page1 .bubble { position: absolute;width: 100%;height: 100%;left: 0;top: 0; }
+section.page1 .bubble span{ position:absolute; left:0; top:0; width:1rem; height:1rem; will-change:transform; display: none;}
+section.page1 .bubble span i{ display: block; width: 100%; height: 100%; will-change:transform;background-image: url(../images/weddingimg/growheart.png);background-size: 100% 100%; }
+section.page1 .roseheart{ position:absolute; left:50%; top:50%; width:5rem; height:4.16rem;margin-left: -2.5rem;margin-top: -1.08rem;}
+section.page1 .arrow1 { position: absolute;bottom: 0.2rem;width: 1.3rem;left:50%;display: inline-block;height: 1.68rem;-webkit-mask-image: url(../images/weddingimg/rosebtn.png);margin-left: -0.65rem; }
+.arrow1 i { background-color: #FF0000;}
+.arrow2 i { background-color: #191970;}
+.arrow3 i { background-color: #00FFFF;}
+/*page1--end*/
+section.page2 { background-image: url(../images/weddingimg/bg.png);transform-style:preserve-3d; perspective:1000px; }
+section.page2 .circle{width:100%; height:80%; overflow: hidden; position:relative;margin-top: 0;}
+section.page2 .circle img{  position:absolute; left:0; top:0; width:1.4rem; overflow: hidden; box-shadow: 0 0 0.1rem #333; will-change:transform;}
+section.page2 .wheel{ position: absolute; left: 50%; top: 28%; width: 3rem; height: 3rem; margin-left: -1.5rem; background-image: url(../images/weddingimg/wheel.png);}
+section.page2 .arrow2 { position: absolute;bottom: 0.3rem;width: 1.3rem;left:50%;display: inline-block;height: 1.68rem;-webkit-mask-image: url(../images/weddingimg/rosebtn.png);margin-left: -0.65rem; }
+section.page2 .imgbox { background-color: #000000;width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 3;display: none;text-align: center; }
+section.page2 .imgbox img { width: 100%;will-change:transform;position: absolute;left: 0;top: 0;bottom: 0;right: 0;margin: auto;display: inline-block; }
+/*page2--end*/
+section.page3 { transform-style:preserve-3d; perspective:1000px;background-image: url(../images/weddingimg/bg.png); }
+section.page3 .sky { position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden; pointer-events:none;}
+section.page3 .sky i{ position:absolute; left:0; top:0; width:0.3rem; height:0.3rem; will-change:transform;background-image: url(../images/weddingimg/growheart.png);}
+section.page3 .arrow3 { position: absolute;bottom: 0.3rem;width: 1.3rem;left:50%;display: inline-block;height: 1.68rem;-webkit-mask-image: url(../images/weddingimg/rosebtn.png);margin-left: -0.65rem; }
+/*page3--end*/
+/*swiper--css*/
+section.page3 .swiper-container { width: 100%;position: absolute;left:0;top: 0.2rem;text-align: center;height: 80%; }
+section.page3 .swiperbox { background-color: #000000;width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 8;display: none;text-align: center; }
+section.page3 .swiperbox img { width: 100%;will-change:transform;position: absolute;left: 0;top: 0;bottom: 0;right: 0;margin: auto;display: inline-block; }
+.swiper-wrapper .swiper-slide { width: 100%;position: relative; }
+.swiper-container .swiper-wrapper .swiper-slide img { width: 80%; position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;display: display: inline-block;}
+.swiper-container .swiper-button-prev { background-image: url(../images/weddingimg/prev.png);width: 0.7rem;left: 0;background-size: 100% 100%; }
+.swiper-container .swiper-button-next { background-image: url(../images/weddingimg/next.png);width: 0.68rem;right: 0;background-size: 100% 100%; }
+.swiper-container .swiper-button-next.swiper-button-disabled,.swiper-container .swiper-button-prev.swiper-button-disabled{ opacity: 0.6; }
+/*swiper--css-end*/
+section.page4 { background-image: url(../images/weddingimg/wedding3.jpg); }
+section.page4 .sky4 { position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden; pointer-events:none; }
+section.page4 .sky4 i{ display:block; position:absolute; left:0; top:0; width:1rem; height:1rem; background:rgba(255,255,255,1); box-shadow:0 0 .2rem #fff; border-radius:50%; will-change:transform,opacity;}
+section.page4 .btn { display: inline-block;height: 0.8rem;line-height: 0.8rem;font-size: 0.34rem;color: #FF0000;position: absolute;top: 50%;left: 50%;margin-left:-2rem;border: 0.06rem solid #FF0000;text-align: center;margin-top: -0.4rem;width: 4rem; }
+
+
+/*---------------------------------------- css media 适配部分（针对使用虚拟系统按键的android）----------------------*/
+@media screen and (device-width:360px) and (max-height:560px), screen and (device-width:412px) and (max-height:650px) and (-webkit-min-device-pixel-ratio:3.5), screen and (device-width:540px) and (device-height:780px){
+
+}
+
+/*---------------------------------------- css media 适配部分（针对iphone4） ----------------------------------------------*/
+@media screen and (device-width:320px) and (device-height:480px), screen and (device-width:540px) and (device-height:702px){
+
+}
+
+/*---------------------------------------- css media 适配部分（针对android）----------------------*/
+@media screen and (device-width:360px), screen and (device-width:412px) and (-webkit-min-device-pixel-ratio:3.5){
+
+}
+
+/*---------------------------------------- css media 适配部分（针对iphone） ----------------------------------------------*/
+@media screen and (device-width:320px), screen and (device-width:375px), screen and (device-width:414px), screen and (device-width:540px) and (device-height:868px){
+
+}

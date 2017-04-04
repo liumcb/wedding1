@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>wedding</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script src="js/base/base.js"></script>
+<script>
+ibase.viewport('rem');//设定css单位:rem、px
+ibase.orient('portrait');//设定锁定：竖屏 portrait/横屏 landscape
+ibase.load('css/wedding.css');//无缓存加载文件
+</script>
+</head>
+<body>
+<!--------------------------------------------------------------html区域-------------------------------------------------------------------------------------------->
+<article>
+	<section class="page scratchcard">
+		<div id="ticketResult">
+			<h3>
+				<div class="texts">
+          			<p class="blessing">诚邀您的到来</p> 
+				</div>
+			</h3>
+    	</div>
+    	<a class="arrow arrow0"><i></i></a>
+	</section>
+	<section class="page page1 none">
+		<div class="bubble"></div>
+		<img class="roseheart rubberBand" src="images/weddingimg/growheart.png" alt="" />
+		<a class="arrow arrow1"><i class="heightfull"></i></a>
+	</section>
+	<section class="page page2 none">
+		<div class="circle">
+		    <img src="images/weddingimg/wedding_01.jpg" />
+		    <img src="images/weddingimg/wedding_02.jpg" />
+		    <img src="images/weddingimg/wedding_03.jpg" />
+		    <img src="images/weddingimg/wedding_04.jpg" />
+		    <img src="images/weddingimg/wedding_05.jpg" />
+		    <img src="images/weddingimg/wedding_06.jpg" />
+		</div>
+		<div class="imgbox none"><img src="images/weddingimg/heart.png" /></div>
+		<div class="wheel flash"></div>
+		<a class="arrow arrow2"><i class="heightfull"></i></a>
+	</section>
+	<section class="page page3 none">
+		<div class="sky" id="skyBox"></div>
+		<div class="swiper-container">
+    		<div class="swiper-wrapper">
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding1.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding2.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding3.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding4.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding5.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding6.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding7.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding8.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding9.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding10.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding11.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding12.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding13.jpg" /></div>
+        		<div class="swiper-slide"><img src="images/weddingimg/wedding14.jpg" /></div>
+    		</div>    
+    		<!-- 如果需要导航按钮 -->
+    		<div class="swiper-button-prev pnanim1"></div>
+    		<div class="swiper-button-next pnanim2"></div>
+		</div>
+		<!--<a id="btn1">dianji</a>-->
+		<div class="swiperbox none"><img src="images/weddingimg/wedding1.jpg" /></div>
+		
+		<a class="arrow arrow3"><i class="heightfull"></i></a>
+	</section>
+	<section class="page page4 none">
+		<div class="sky4" id="skyBox4"></div>
+		<a href="javascript:void(0)" class="btn flash">5月7日，不见不散^_^</a>
+	</section>
+</article>
+<!--------------------------------------------------------------javascript区域-------------------------------------------------------------------------------------->
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/base/jquery.js"></script>
+<script src="js/base/framwork.js"></script>
+<script src="js/base/share.js"></script>
+<script src="http://bamboo.api.be-xx.com/js/loop_api.js"></script>
+<script src="js/base/user.js"></script>
+<link rel="stylesheet" href="js/swiperjs/swiper.min.css" />
+<script type="text/javascript" src="js/swiperjs/swiper.min.js"></script>
+<script src="js/widget/iphone.scratch.js"></script>
+<script src="js/widget/text/jquery.lettering.js"></script>
+<script src="js/widget/text/jquery.textillate.js"></script>
+<link href="js/widget/text/animate.css" rel="stylesheet">
+<script src="js/widget/iphone.bubble.js"></script>
+<script src="js/widget/iphone.circle.js"></script>
+<script src="js/widget/iphone.snow.js"></script>
+<script src="js/widget/iphone.shine.js"></script>
+<script src="js/base/audio.js"></script>
+<script>ibase.load('js/wedding.js');</script>
+<script type="text/javascript">
+		var ticketResult=$('#ticketResult');
+		ticketResult.scratchOn('images/weddingimg/cardmask.png',{onComplete:scratchComplete});
+		function scratchComplete(){
+			$("h3").css({visibility:'visible'});
+			$('h3').textillate({loop: true, in: { effect: 'rollIn',callback: function () {
+				console.log('in complete');
+			}}, out: {effect: 'flash',callback: function () {
+				console.log('out complete');
+			}} });
+			
+			$(".arrow0 i").css({visibility:'visible'}).addClass("heightfull");
+		}//end func
+</script>
+</body>
+</html>
